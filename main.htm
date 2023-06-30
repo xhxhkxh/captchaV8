@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>Captcha Verify</title>
+    <style type="text/css">
+        p {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        body {
+            background-color: rgb(34, 34, 34);
+        }
+
+        math {
+            color: aliceblue;
+        }
+
+        .inp {
+            position: absolute;
+            left: 40%;
+        }
+
+        .sbm {
+            position: absolute;
+            top: 35%;
+            left: 38%;
+            height: 5em;
+            width: 15rem;
+            border-radius: 3em;
+            background-image: linear-gradient(rgb(248, 170, 183), rgb(211, 27, 202), rgb(119, 255, 248));
+
+        }
+
+        .hint {
+            position: absolute;
+            left: 70%;
+
+        }
+    </style>
+    <script>
+        function check() {
+            var ans = document.getElementById("answer").value;
+            if (ans == "我不会") {
+                document.write("<h1>恭喜！验证成功</h1>");
+            }
+            else {
+                alert("验证码错误");
+            }
+        }
+        function hint() {
+            alert("验证码长度为3");
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: aliceblue;">完成验证码来进行下一步</h3>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <munder>
+                <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo accent="false" stretchy="false">→</mo>
+                    <mi mathvariant="normal">∞</mi>
+                </mrow>
+            </munder>
+            <mfrac>
+                <mrow>
+                    <mi>sin</mi>
+                    <mo data-mjx-texclass="NONE">⁡</mo>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo stretchy="false">)</mo>
+                </mrow>
+                <mi>x</mi>
+            </mfrac>
+        </math>
+        <p>其中，sin(x)是正弦函数。求该极限的值。</p>
+        <input class="inp" id="answer" placeholder="输入答案" type="text" />
+        <button id="hint" class="hint" onclick="hint()">提示</button>
+        <br />
+        <button type="submit" class="sbm" onclick="check()">我是人类</button>
+</body>
